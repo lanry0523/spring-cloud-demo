@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>spring-cloud-demo</groupId>
+		<artifactId>spring-cloud-demo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>spring-cloud-demo</groupId>
+	<artifactId>Spring-cloud-rocketmq</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Spring-cloud-rocketmq</name>
+	<url>http://maven.apache.org</url>
+	<properties>  
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
+        <java.version>1.8</java.version>  
+        <rocketmq.version>4.0.0-incubating</rocketmq.version>  
+    </properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- RocketMq客户端相关依赖 -->  
+        <dependency>  
+            <groupId>org.apache.rocketmq</groupId>  
+            <artifactId>rocketmq-client</artifactId>  
+            <version>${rocketmq.version}</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.apache.rocketmq</groupId>  
+            <artifactId>rocketmq-common</artifactId>  
+            <version>${rocketmq.version}</version>  
+        </dependency>  
+          
+        <dependency>  
+            <groupId>org.projectlombok</groupId>  
+            <artifactId>lombok</artifactId>  
+            <version>1.16.10</version><!--$NO-MVN-MAN-VER$-->  
+        </dependency>  
+	</dependencies>
+</project>
