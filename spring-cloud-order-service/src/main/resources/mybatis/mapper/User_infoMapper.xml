@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.spring.cloud.order.UserMapper">
+<mapper namespace="org.spring.cloud.order.mapper.UserMapper">
 	<!-- <resultMap id="BaseResultMap" type="org.service.one.entity.User_info" >
 	    <id column="id" property="id" jdbcType="VARCHAR" />
 	    <result column="userName" property="userName" jdbcType="VARCHAR" />

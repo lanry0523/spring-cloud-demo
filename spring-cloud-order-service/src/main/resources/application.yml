@@ -62,7 +62,7 @@ mybatis:
   # mybatis.type-aliases-package：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名（看后边的UserMapper.xml介绍）
   mapper-locations: classpath:mybatis/mapper/*.xml
   #config-location: classpath:mybatis/mybatis-config.xml
-  type-aliases-package: org.service.one.entity
+  type-aliases-package: org.spring.cloud.order.entity
 #####################################################################################################
 
 #####################################################################################################

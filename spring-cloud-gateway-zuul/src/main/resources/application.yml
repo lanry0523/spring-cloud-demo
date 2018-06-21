@@ -5,6 +5,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9099/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    appname: spring-cloud-gateway-zuul
 server:
   port: 9056
 zuul:

@@ -1,6 +1,6 @@
 spring:
   application:
-   name: spring-cloud-service
+   name: spring-cloud-user-service
   datasource: 
    type: com.alibaba.druid.pool.DruidDataSource
    yunpu: 
@@ -36,7 +36,7 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-    appname: spring-cloud-service
+    appname: spring-cloud-user-service
 server:
   port: 9055
 hystrix:
