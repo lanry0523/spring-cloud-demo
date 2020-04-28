@@ -22,14 +22,14 @@ protected final Logger logger = Logger.getLogger(UserController.class);
 	
 	@Autowired
 	private UserInfoService userInfoService;
+	@Autowired
+	private  ResultGenerator generator;
 	
-	private final ResultGenerator generator;
-	
-	@Autowired  // 自动装配
-	public UserController(UserInfoService userInfoService, ResultGenerator generator) {
-		this.userInfoService = userInfoService;
-		this.generator = generator;
-	}
+//	@Autowired  // 自动装配
+//	public UserController(UserInfoService userInfoService, ResultGenerator generator) {
+//		this.userInfoService = userInfoService;
+//		this.generator = generator;
+//	}
 	@ApiOperation("订单查询")
 	@RequestMapping(value="/serviceOne", produces = { "application/json;charset=UTF-8" },method=RequestMethod.GET)
 	@ResponseBody

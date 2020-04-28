@@ -18,7 +18,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import com.alibaba.druid.pool.DruidDataSource;
 
 @Configuration
-@MapperScan(basePackages = "org.spring.cloud.order.mapper", sqlSessionTemplateRef = "baseSqlSessionTemplate")
+@MapperScan(basePackages = "org.spring.cloud.order.dao", sqlSessionTemplateRef = "baseSqlSessionTemplate")
 public class BaseDataSourceConfig {
 	@Bean(name = "baseDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.lczc")
