@@ -1,4 +1,5 @@
-package org.service.one;
+package org.spring.cloud.order;
+
 
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -12,9 +13,9 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableEurekaClient
-public class AppliactionRun {
+public class OrderAppliactionRun {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(AppliactionRun.class, args);
+		SpringApplication.run(OrderAppliactionRun.class, args);
 	}
 }

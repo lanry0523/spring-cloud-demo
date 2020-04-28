@@ -3,13 +3,13 @@ spring:
    name: spring-cloud-order-service
   datasource: 
    type: com.alibaba.druid.pool.DruidDataSource
-   yunpu: 
-     name: yunpu
+   lczc:
+     name: lczc
      driver-class-name: com.mysql.cj.jdbc.Driver # com.mysql.jdbc.Driver
      initialize: true
-     url: jdbc:mysql://rm-wz951d5k04l5oyu52o.mysql.rds.aliyuncs.com:3306/yunpu?useUnicode=true&characterEncoding=UTF-8
+     url: jdbc:mysql://127.0.0.1:3306/lczc?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
      username: root
-     password: Pp001219
+     password: root
      filters: stat
      maxActive: 20
      initialSize: 10

@@ -21,7 +21,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 @MapperScan(basePackages = "org.spring.cloud.order.mapper", sqlSessionTemplateRef = "baseSqlSessionTemplate")
 public class BaseDataSourceConfig {
 	@Bean(name = "baseDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.yunpu")
+    @ConfigurationProperties(prefix = "spring.datasource.lczc")
     @Primary
     public DataSource setDataSource() {
         return DataSourceBuilder.create().build();
