@@ -40,11 +40,6 @@
 			<version>1.4.3.RELEASE</version>
 		</dependency>
 		<!--common通用类-->
-		<dependency>
-			<groupId>spring-cloud-demo</groupId>
-			<artifactId>spring-cloud-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 </dependencies>
 	<build>
 		<plugins>
