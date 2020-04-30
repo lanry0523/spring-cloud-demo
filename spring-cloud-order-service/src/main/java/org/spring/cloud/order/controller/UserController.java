@@ -1,16 +1,14 @@
 package org.spring.cloud.order.controller;
 
 
-
-import com.common.Logger;
-import com.common.RestResult;
-import com.common.ResultGenerator;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.spring.cloud.order.base.BaseController;
 import org.spring.cloud.order.entity.PageData;
 import org.spring.cloud.order.service.UserInfoService;
-
+import org.spring.cloud.order.util.Logger;
+import org.spring.cloud.order.util.RestResult;
+import org.spring.cloud.order.util.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
