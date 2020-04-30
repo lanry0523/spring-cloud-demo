@@ -97,12 +97,12 @@
             <!--此id要与setting.xml里面server的id对应-->
             <id>releases</id>
             <name>releases Repository</name>
-            <url>http://101.200.61.254:8081/repository/maven-releases/</url>
+            <url>http://39.100.70.223:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
-            <url>http://101.200.61.254:8081/repository/maven-snapshots/</url>
+            <url>http://39.100.70.223:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
