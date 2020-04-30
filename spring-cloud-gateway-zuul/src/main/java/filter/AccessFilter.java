@@ -1,7 +1,5 @@
 package filter;
 
-import com.common.ResultCode;
-import com.common.ResultGenerator;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.apache.commons.lang.StringUtils;
@@ -17,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class AccessFilter extends ZuulFilter {
     private final Logger logger = LoggerFactory.getLogger(AccessFilter.class);
-    private ResultGenerator resultGenerator;
     /**
      * 过滤器类型选择：
      * pre 为路由前
