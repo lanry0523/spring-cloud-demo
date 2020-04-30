@@ -1,10 +1,20 @@
 spring:
   application:
    name: spring-cloud-gateway-zuul
+  cloud:
+    spring-cloud-gateway-zuul:
+      cors-configurations:
+        '[/**]': # 匹配所有请求
+          allowedOrigins: "*" # 跨域处理 允许所有的域
+          allowedMethods:  # 支持的方法
+            - GET
+            - POST
+            - PUT
+            - DELETE
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:9099/eureka/
+      defaultZone: http://peer1:9099/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
@@ -12,14 +22,18 @@ eureka:
 server:
   port: 9056
 zuul:
-  #ignored-services: microservice-provider-user          # 需要忽视的服务(配置后将不会被路由)
+  #ignored-services: microservice-provider-user        # 需要忽视的服务(配置后将不会被路由)
   routes:
-    api-a:                                              # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
-      path: /user/**                                   # 想要映射到的路径
-      service-id: spring-cloud-user-service    # Eureka中的serviceId
-    api-b:                                              # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
-      path: /order/**                                   # 想要映射到的路径
-      service-id: spring-cloud-order-service    # Eureka中的serviceId
+    spring-cloud-user-service:                         # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+      path: /user/**                                   # 映射的url
+      service-id: spring-cloud-user-service            # Eureka中的serviceId
+    spring-cloud-order-service:                        # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+      path: /order/**                                  # 想要映射到的路径
+      service-id: spring-cloud-order-service           # Eureka中的serviceId
   ribbon:  
     ReadTimeout: 60000  
-    ConnectTimeout: 60000   
+    ConnectTimeout: 60000
+
+logging:
+  level:
+    com.netflix: debug

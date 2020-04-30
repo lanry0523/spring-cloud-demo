@@ -9,11 +9,11 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
+
 	<groupId>spring-cloud-demo</groupId>
 	<artifactId>spring-cloud-gateway-zuul</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-gateway-zuul</name>
-	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -24,7 +24,27 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+		<!-- Eureka的依赖 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+		<!-- Spring Cloud Zuul的依赖 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+			<version>1.4.3.RELEASE</version>
+		</dependency>
+		<!--common通用类-->
+		<dependency>
+			<groupId>spring-cloud-demo</groupId>
+			<artifactId>spring-cloud-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 </dependencies>
 	<build>
 		<plugins>

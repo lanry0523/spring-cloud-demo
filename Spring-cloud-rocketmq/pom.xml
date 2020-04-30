@@ -11,6 +11,7 @@
 	<groupId>spring-cloud-demo</groupId>
 	<artifactId>Spring-cloud-rocketmq</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>Spring-cloud-rocketmq</name>
 	<url>http://maven.apache.org</url>
 	<properties>  

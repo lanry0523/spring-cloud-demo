@@ -15,7 +15,8 @@
 		<module>spring-cloud-gateway-zuul</module>
 		<module>Spring-cloud-rocketmq</module>
 		<module>spring-cloud-user-service</module>
-	</modules>
+        <module>spring-cloud-common</module>
+    </modules>
 	<!--以下dependency来自官方-->  
     <parent>  
         <groupId>org.springframework.boot</groupId>  

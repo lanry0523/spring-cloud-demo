@@ -9,6 +9,7 @@
 	<groupId>spring-cloud-demo</groupId>
 	<artifactId>spring-cloud-user-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>spring-cloud-user-service</name>
 	<url>http://maven.apache.org</url>
 	<properties>
