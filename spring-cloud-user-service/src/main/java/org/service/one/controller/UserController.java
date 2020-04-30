@@ -8,7 +8,6 @@ import org.service.one.base.BaseController;
 import org.service.one.entity.PageData;
 import org.service.one.entity.RestResult;
 import org.service.one.entity.ResultGenerator;
-import org.service.one.entity.User_info;
 import org.service.one.service.UserInfoService;
 import org.service.one.util.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
