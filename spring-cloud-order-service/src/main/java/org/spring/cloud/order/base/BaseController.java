@@ -3,9 +3,10 @@ package org.spring.cloud.order.base;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.common.Logger;
-import com.common.UuidUtil;
+
 import org.spring.cloud.order.entity.PageData;
+import org.spring.cloud.order.util.Logger;
+import org.spring.cloud.order.util.UuidUtil;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
