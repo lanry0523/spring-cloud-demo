@@ -7,7 +7,7 @@ spring:
       initialize: true
       url: jdbc:mysql://39.100.70.223:3306/lrydb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
       username: root
-      password: WuShen3882!
+      password: LlRrYy3882!
       filters: stat
       maxActive: 20
       initialSize: 10
