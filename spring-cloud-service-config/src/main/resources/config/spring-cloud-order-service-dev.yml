@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    lczc:
+      name: lczc
+      driver-class-name: com.mysql.cj.jdbc.Driver # com.mysql.jdbc.Driver
+      initialize: true
+      url: jdbc:mysql://39.100.70.223:3306/lrydb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true
+      username: root
+      password: WuShen3882!
+      filters: stat
+      maxActive: 20
+      initialSize: 10
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9099/eureka/
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+
+#####################################################################################################
+# mybatis mapper xml 配置
+#mybatis:
+  # mybatis.type-aliases-package：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名（看后边的UserMapper.xml介绍）
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  #config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: org.spring.cloud.order.entity
+#####################################################################################################
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.springms: DEBUG
+      #####################################################################################################
+

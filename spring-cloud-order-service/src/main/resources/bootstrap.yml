@@ -1,0 +1,18 @@
+spring:
+  application:
+   name: spring-cloud-order-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-service-config
+      profile: '@build.profile.id@'
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9099/eureka/
+
+server:
+  port: 9057
+

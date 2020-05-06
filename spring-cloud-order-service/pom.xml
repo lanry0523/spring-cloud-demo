@@ -72,13 +72,20 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-		<!--common通用类-->
-<!--		<dependency>-->
-<!--			<groupId>spring-cloud-demo</groupId>-->
-<!--			<artifactId>spring-cloud-common</artifactId>-->
-<!--			<version>0.0.1-SNAPSHOT</version>-->
-<!--		</dependency>-->
+
 	</dependencies>
+	<profiles>
+		<!-- 开发测试-->
+		<profile>
+			<id>dev</id>
+			<properties>
+				<build.profile.id>dev</build.profile.id>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
 	<build>
 		<plugins>
 			<plugin>

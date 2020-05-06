@@ -41,6 +41,18 @@
 		</dependency>
 		<!--common通用类-->
 </dependencies>
+	<profiles>
+		<!-- 开发测试-->
+		<profile>
+			<id>dev</id>
+			<properties>
+				<build.profile.id>dev</build.profile.id>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
 	<build>
 		<plugins>
 			<plugin>

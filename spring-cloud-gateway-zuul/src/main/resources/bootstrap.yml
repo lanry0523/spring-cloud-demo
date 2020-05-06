@@ -1,0 +1,16 @@
+spring:
+  application:
+   name: spring-cloud-gateway-zuul
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-service-config
+      profile: '@build.profile.id@'
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:9099/eureka/
+
+server:
+  port: 9056

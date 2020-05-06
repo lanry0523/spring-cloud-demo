@@ -1,0 +1,19 @@
+
+server:
+  port: 9010
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9099/eureka/
+
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:config/ # 搜索src/main/resources 下的config文件夹下的文件
+  application:
+    name: spring-cloud-service-config
+  profiles:
+    active: native  # 配置使用本地储存
