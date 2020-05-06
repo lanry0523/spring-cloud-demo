@@ -5,7 +5,7 @@ spring:
       name: lczc
       driver-class-name: com.mysql.cj.jdbc.Driver # com.mysql.jdbc.Driver
       initialize: true
-      url: jdbc:mysql://39.100.70.223:3306/lrydb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=true
+      url: jdbc:mysql://39.100.70.223:3306/lrydb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
       username: root
       password: WuShen3882!
       filters: stat
