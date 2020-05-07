@@ -20,7 +20,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)  
                 .apiInfo(apiInfo())  
                 .select()  
-                .apis(RequestHandlerSelectors.basePackage("org.spring.cloud.order.controller"))// 扫描该包下的所有需要在Swagger中展示的API，@ApiIgnore注解标注的除外  
+                .apis(RequestHandlerSelectors.basePackage("com.order.controller"))// 扫描该包下的所有需要在Swagger中展示的API，@ApiIgnore注解标注的除外
                 .paths(PathSelectors.any())  
                 .build();  
     }  
