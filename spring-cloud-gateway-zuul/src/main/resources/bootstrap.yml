@@ -6,7 +6,7 @@ spring:
       discovery:
         enabled: true
         service-id: spring-cloud-service-config
-      profile: '@build.profile.id@'
+      profile: @build.profile.id@
 eureka:
   client:
     service-url:
