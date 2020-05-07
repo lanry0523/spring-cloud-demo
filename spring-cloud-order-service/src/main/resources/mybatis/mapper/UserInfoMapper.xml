@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.order.dao.UserInfoDao">
+
+    <resultMap id="BaseResult" type="com.order.entity.UserInfo">
+        <result column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="sex" property="sex"/>
+        <result column="address" property="address"/>
+        <result column="mobile" property="mobile"/>
+        <result column="mail" property="mail"/>
+        <result column="id_no" property="idNo"/>
+        <result column="password" property="password"/>
+        <result column="openid" property="openid"/>
+        <result column="access_token" property="accessToken"/>
+        <result column="refresh_token" property="refreshToken"/>
+        <result column="headimgurl" property="headimgurl"/>
+        <result column="rongCloud_token" property="rongcloudToken"/>
+        <result column="status" property="status"/>
+
+    </resultMap>
+
+    <sql id="table_name" >
+        user_info
+    </sql>
+
+    <sql id="columns" >
+        id,
+        user_name,
+        sex,
+        address,
+        mobile,
+        mail,
+        id_no,
+        password,
+        openid,
+        access_token,
+        refresh_token,
+        headimgurl,
+        rongCloud_token,
+        status
+
+    </sql>
+
+    <sql id="select_condition" >
+        <if test="id != null and id != ''">AND id = #{id}</if>
+        <if test="userName != null and userName != ''">AND user_name = #{userName}</if>
+        <if test="sex != null and sex != ''">AND sex = #{sex}</if>
+        <if test="address != null and address != ''">AND address = #{address}</if>
+        <if test="mobile != null and mobile != ''">AND mobile = #{mobile}</if>
+        <if test="mail != null and mail != ''">AND mail = #{mail}</if>
+        <if test="idNo != null and idNo != ''">AND id_no = #{idNo}</if>
+        <if test="password != null and password != ''">AND password = #{password}</if>
+        <if test="openid != null and openid != ''">AND openid = #{openid}</if>
+        <if test="accessToken != null and accessToken != ''">AND access_token = #{accessToken}</if>
+        <if test="refreshToken != null and refreshToken != ''">AND refresh_token = #{refreshToken}</if>
+        <if test="headimgurl != null and headimgurl != ''">AND headimgurl = #{headimgurl}</if>
+        <if test="rongcloudToken != null and rongcloudToken != ''">AND rongCloud_token = #{rongcloudToken}</if>
+        <if test="status != null and status != ''">AND status = #{status}</if>
+
+    </sql>
+
+    <sql id="special_select_condition" >
+        <if test="form.id != null and form.id != ''">AND id = #{form.id}</if>
+        <if test="form.userName != null and form.userName != ''">AND user_name = #{form.userName}</if>
+        <if test="form.sex != null and form.sex != ''">AND sex = #{form.sex}</if>
+        <if test="form.address != null and form.address != ''">AND address = #{form.address}</if>
+        <if test="form.mobile != null and form.mobile != ''">AND mobile = #{form.mobile}</if>
+        <if test="form.mail != null and form.mail != ''">AND mail = #{form.mail}</if>
+        <if test="form.idNo != null and form.idNo != ''">AND id_no = #{form.idNo}</if>
+        <if test="form.password != null and form.password != ''">AND password = #{form.password}</if>
+        <if test="form.openid != null and form.openid != ''">AND openid = #{form.openid}</if>
+        <if test="form.accessToken != null and form.accessToken != ''">AND access_token = #{form.accessToken}</if>
+        <if test="form.refreshToken != null and form.refreshToken != ''">AND refresh_token = #{form.refreshToken}</if>
+        <if test="form.headimgurl != null and form.headimgurl != ''">AND headimgurl = #{form.headimgurl}</if>
+        <if test="form.rongcloudToken != null and form.rongcloudToken != ''">AND rongCloud_token = #{form.rongcloudToken}</if>
+        <if test="form.status != null and form.status != ''">AND status = #{form.status}</if>
+
+    </sql>
+
+
+
+
+</mapper>

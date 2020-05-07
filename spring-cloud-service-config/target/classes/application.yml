@@ -12,8 +12,7 @@ spring:
     config:
       server:
         native:
-
-          search-locations: classpath:config/ # 搜索src/main/resources 下的config文件夹下的文件
+          search-locations: classpath:/config # 搜索src/main/resources 下的config文件夹下的文件
   application:
     name: spring-cloud-service-config
   profiles:
