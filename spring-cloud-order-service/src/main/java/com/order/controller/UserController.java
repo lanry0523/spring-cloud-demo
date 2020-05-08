@@ -1,13 +1,14 @@
 package com.order.controller;
 
 
+import com.utils.Logger;
+import com.utils.UuidUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import com.order.base.BaseController;
 import com.order.entity.PageData;
 import com.order.entity.UserInfo;
 import com.order.service.UserInfoService;
-import com.order.util.Logger;
 import com.order.util.RestResult;
 import com.order.util.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ protected final Logger logger = Logger.getLogger(UserController.class);
 		UserInfo userInfo = new UserInfo();
 		userInfo.setMobile(mobile);
 		userInfo = userInfoService.selectByPhone(userInfo);
-		logger.info("返回："+userInfo);
+		logger.info("返回："+ UuidUtil.getUUID());
 		return ResultGenerator.getSuccessResult(userInfo);
 	}
 }

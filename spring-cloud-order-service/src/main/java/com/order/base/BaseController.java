@@ -1,17 +1,16 @@
 package com.order.base;
 
 
-import javax.servlet.http.HttpServletRequest;
-
-
 import com.order.entity.PageData;
 import com.order.util.Logger;
-import com.order.util.UuidUtil;
+import com.utils.UuidUtil;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import javax.servlet.http.HttpServletRequest;
 
 public class BaseController extends WebMvcConfigurerAdapter{
 	

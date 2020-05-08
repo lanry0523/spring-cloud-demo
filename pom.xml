@@ -16,6 +16,7 @@
 		<module>Spring-cloud-rocketmq</module>
 		<module>spring-cloud-user-service</module>
         <module>spring-cloud-service-config</module>
+        <module>spring-cloud-common</module>
     </modules>
 	<!--以下dependency来自官方-->  
     <parent>  
@@ -106,13 +107,5 @@
         </snapshotRepository>
     </distributionManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-        <defaultGoal>compile</defaultGoal>
-    </build>
+
 </project>
